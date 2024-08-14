@@ -17,7 +17,6 @@ export default function index() {
           <div className="w-1/3 h-[2px] bg-gradient-to-r from-transparent via-mainText to-transparent mb-2"></div>
         </div>
         <LinkBar />
-        <div className="py-5"></div>
       </div >
     </>
   )
