@@ -27,7 +27,7 @@ const linkBarItems: LinkBarItem[] = [
 
 const LinkBar = () => {
   return (
-    <div className="flex gap-20 justify-center items-center">
+    <div className="flex gap-20 justify-center items-center mt-5">
       {linkBarItems.map((item, index) => (
         <a
           key={index}
