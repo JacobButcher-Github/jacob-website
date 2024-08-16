@@ -27,6 +27,7 @@ const config: Config = {
         colorPrimary: "#66C0F4",
         colorSecondary: "#4B619B",
         accentGreen: "#A1CD44",
+        hoverAccentGreen: "#abd64f",
         accentRed: "#CD5444",
         accentYellow: "#C1B15F",
       },
