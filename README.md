@@ -4,7 +4,7 @@ I wanted to make a personal website landing page with links that can lead to sit
 
 ## URL
 
-[jacob-butcher.vercel.com](jacob-butcher.vercel.com) or something
+[jacob-website-gray.vercel.app](https://jacob-website-gray.vercel.app/)
 
 ## Notes
 
