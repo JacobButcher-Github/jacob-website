@@ -1,6 +1,6 @@
 import Head from "next/head";
-import NavBar from '../components/NavBar'
-import { getSortedPostsData, PostData } from '../../lib/posts';
+import NavBar from "../components/NavBar";
+import { getSortedPostsData, PostData } from "../../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -27,16 +27,12 @@ export default function Blog({ allPostsData }: { allPostsData: PostData[] }) {
               <li className="" key={id}>
                 {title}
                 <br />
-                {id}
-                <br />
                 {date}
               </li>
             ))}
           </ul>
-
         </div>
       </div>
     </>
   );
 }
-
