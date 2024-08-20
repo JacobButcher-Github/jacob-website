@@ -41,7 +41,15 @@ export function getSortedPostsData(): PostData[] {
   });
 }
 
-export function getAllPostIds() {
+export interface Params {
+  id: string;
+}
+
+interface ReturnType {
+  params: Params;
+}
+
+export function getAllPostIds(): ReturnType[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
   // Returns an array that looks like this:
@@ -66,7 +74,7 @@ export function getAllPostIds() {
   });
 }
 
-export function getPostData(id: number) {
+export function getPostData(id: string): PostData {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -76,6 +84,7 @@ export function getPostData(id: number) {
   // Combine the data with the id
   return {
     id,
+    date: matterResult.data.date as string,
     ...matterResult.data,
   };
 }
