@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Link from 'next/link';
 import NavBar from "../components/NavBar";
-import { getSortedPostsData, PostData } from "../../lib/posts";
+import Date from "../components/date";
+import { getSortedPostsData, PostDataSurface } from "../../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -11,11 +13,11 @@ export async function getStaticProps() {
   };
 }
 
-export default function Blog({ allPostsData }: { allPostsData: PostData[] }) {
+export default function Blog({ allPostsData }: { allPostsData: PostDataSurface[] }) {
   return (
     <>
       <Head>
-        <title>About - Jacob Butcher</title>
+        <title>Blog - Jacob Butcher</title>
       </Head>
       <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen">
         <NavBar />
@@ -26,9 +28,9 @@ export default function Blog({ allPostsData }: { allPostsData: PostData[] }) {
           <ul className="text-2xl">
             {allPostsData.map(({ id, date, title }) => (
               <li className="" key={id}>
-                {title}
+                <Link className="text-colorSecondary" href={`/posts/${id}`}>{title}</Link>
                 <br />
-                {date}
+                <Date dateString={date} />
               </li>
             ))}
           </ul>
