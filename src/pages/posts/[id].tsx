@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: Params }) {
-  const postData = getPostData(params.id);
+  const postData = await getPostData(params.id);
   return {
     props: {
       postData,
@@ -23,7 +23,7 @@ export default function Post({ postData }: { postData: PostData }) {
   return (
     <>
       <Head>
-        <title>About - Jacob Butcher</title>
+        <title>{postData.id} - Jacob Butcher</title>
       </Head>
       <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen">
         <NavBar />
@@ -31,6 +31,7 @@ export default function Post({ postData }: { postData: PostData }) {
         <br />
         <p>{postData.date}</p>
         <br />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </div>
     </>
   );
