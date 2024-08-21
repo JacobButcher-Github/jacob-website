@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Link from 'next/link';
 import NavBar from "../components/NavBar";
+import Date from "../components/date";
 import { getSortedPostsData, PostDataSurface } from "../../lib/posts";
 
 export async function getStaticProps() {
@@ -26,9 +28,9 @@ export default function Blog({ allPostsData }: { allPostsData: PostDataSurface[]
           <ul className="text-2xl">
             {allPostsData.map(({ id, date, title }) => (
               <li className="" key={id}>
-                <a className="text-colorSecondary" href={`/posts/${id}`}>{title}</a>
+                <Link className="text-colorSecondary" href={`/posts/${id}`}>{title}</Link>
                 <br />
-                {date}
+                <Date dateString={date} />
               </li>
             ))}
           </ul>
