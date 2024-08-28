@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import NavBar from '../../components/NavBar'
 import { getAllPostIds, getPostData, Params, PostData } from '../../../lib/posts';
-import Date from '../../components/date';
+import Date from '../../components/Date';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();

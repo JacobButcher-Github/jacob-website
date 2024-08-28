@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from 'next/link';
 import NavBar from "../components/NavBar";
-import Date from "../components/date";
+import Date from "../components/Date";
 import { getSortedPostsData, PostDataSurface } from "../../lib/posts";
 
 export async function getStaticProps() {
