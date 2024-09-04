@@ -25,3 +25,5 @@ const ProjectCard = (props: Props) => {
     </>
   );
 };
+
+export default ProjectCard;

@@ -6,6 +6,7 @@ import { FaReact, FaCaretUp, FaWind } from 'react-icons/fa';
 export interface ProjectItem {
   title: string,
   description: string,
+  imageLocations: string[],
   tagsString: string[],
   tags: React.ReactNode[];
   git: string,
@@ -16,6 +17,11 @@ const projectItems: ProjectItem[] = [
   {
     title: "Website",
     description: "Landing page for all other projects",
+    imageLocations: [
+      "/images/websiteImages/index.png",
+      "/images/websiteImages/about.png",
+      "/images/websiteImages/blog.png",
+    ],
     tagsString: [
       "Next.js",
       "React",
