@@ -14,7 +14,7 @@ const ProjectCard = (props: Props) => {
     <>
       <Link href={item.route}>
         <div className="bg-bgMain hover:bg-bgHover flex flex-row items-start w-full">
-          <PreviewPane item={item} />
+          {/* <PreviewPane item={item} /> */}
           <div className="w-2/3 flex flex-col text-mainText">
             <div className="text-2xl">{item.title}</div>
             <div className="">{item.description}</div>
