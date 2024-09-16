@@ -21,6 +21,7 @@ const projectItems: ProjectItem[] = [
       "/images/websiteImages/index.png",
       "/images/websiteImages/about.png",
       "/images/websiteImages/blog.png",
+      "/images/websiteImages/projects.png"
     ],
     tagsString: [
       "Next.js",

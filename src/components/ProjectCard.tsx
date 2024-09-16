@@ -19,8 +19,8 @@ const ProjectCard = (props: Props) => {
           </div>
 
           <div className="w-7/12 flex flex-col text-mainText">
-            <div className="text-2xl">{item.title}</div>
-            <div className="">{item.description}</div>
+            <div className="text-2xl font-bold">{item.title}</div>
+            <div className="text-dimText">{item.description}</div>
           </div>
         </div>
       </Link>
