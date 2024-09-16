@@ -41,7 +41,7 @@ const ProjectList = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-5">
       {projectItems.map((item) => (
-        <div key={item.route}>
+        <div key={item.route} className="w-full">
           <ProjectCard item={item} />
         </div>
       ))}

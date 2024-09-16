@@ -13,9 +13,12 @@ const ProjectCard = (props: Props) => {
   return (
     <>
       <Link href={item.route}>
-        <div className="bg-bgMain hover:bg-bgHover flex flex-row items-start w-full">
-          {/* <PreviewPane item={item} /> */}
-          <div className="w-2/3 flex flex-col text-mainText">
+        <div className="bg-bgMain hover:bg-bgHover flex flex-row items-start w-full p-2 rounded space-x-5">
+          <div className="w-5/12">
+            <PreviewPane item={item} />
+          </div>
+
+          <div className="w-7/12 flex flex-col text-mainText">
             <div className="text-2xl">{item.title}</div>
             <div className="">{item.description}</div>
           </div>
