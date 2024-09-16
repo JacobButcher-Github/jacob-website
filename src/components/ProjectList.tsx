@@ -3,12 +3,17 @@ import Link from 'next/link';
 import ProjectCard from "./ProjectCard";
 import { FaReact, FaCaretUp, FaWind } from 'react-icons/fa';
 
+interface tags {
+  icon: React.ReactNode;
+  title: string,
+  link: string
+}
+
 export interface ProjectItem {
   title: string,
   description: string,
   imageLocations: string[],
-  tagsString: string[],
-  tags: React.ReactNode[];
+  tagsList: tags[];
   git: string,
   route: string
 }
@@ -21,16 +26,24 @@ const projectItems: ProjectItem[] = [
       "/images/websiteImages/index.png",
       "/images/websiteImages/about.png",
       "/images/websiteImages/blog.png",
+      "/images/websiteImages/projects.png"
     ],
-    tagsString: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-    ],
-    tags: [
-      <FaReact key="react" className="mr-2" />,
-      <FaCaretUp key="next" className="mr-2" />,
-      <FaWind key="tailwind" className="mr-2" />,
+    tagsList: [
+      {
+        icon: <FaCaretUp key="next" className="mr-1" />,
+        title: "Next.JS",
+        link: "https://nextjs.org/"
+      },
+      {
+        icon: <FaReact key="react" className="mr-1" />,
+        title: "React",
+        link: "https://react.dev/"
+      },
+      {
+        icon: <FaWind key="tailwind" className="mr-1" />,
+        title: "Tailwind CSS",
+        link: "https://tailwindcss.com/"
+      }
     ],
     git: "https://github.com/JacobButcher-Github/jacob-website",
     route: "/website"

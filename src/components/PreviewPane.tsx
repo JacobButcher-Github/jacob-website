@@ -19,18 +19,18 @@ const PreviewPane = (props: Props) => {
           fill={true}
           src={mainImage}
           alt="MainImage"
-          className="object-cover"
+          className="object-cover rounded"
         />
       </div>
 
       <div className="w-1/3 flex flex-col ml-2">
         {images.slice(1).map((image, index) => (
-          <div key={index} className="relative w-30 h-28">
+          <div key={index} className="relative w-30 h-20">
             <Image
               fill={true}
               src={image}
               alt={`Small ${index + 1}`}
-              className="object-cover cursor-pointer"
+              className="object-cover cursor-pointer rounded"
               onMouseEnter={() => setMainImage(image)}
               onMouseOut={() => setMainImage(images[0])}
             />
