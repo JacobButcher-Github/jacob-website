@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ServerStatusImage from './ServerStatusImage'
 
 const MainBanner = () => {
   return (
@@ -12,6 +13,7 @@ const MainBanner = () => {
         quality={100}
         className='w-full max-w-6xl h-full max-h-96'
       />
+      <ServerStatusImage />
     </div>
   );
 };
