@@ -27,16 +27,16 @@ export default function about() {
             <h1 className="text-7xl mt-16">About Me</h1>
             <div className="w-1/3 h-[2px] bg-gradient-to-r from-transparent via-mainText to-transparent mb-8"></div>
             <p className="text-mainText text-xl">
-              I am a 26-year-old senior studying Computer Science at the
-              University of Alabama at Birmingham (UAB).
+              I am a 26-year-old MS of Computer Science student at Georgia Tech
+              and a Software Developer at Dark Tower.
             </p>
             <br />
             <p className="text-xl mt-4">
-              I originally graduated from UAB in 2020 with a Biomedical Sciences
-              degree and worked in a clinical diagnostics lab for 3 years. While
-              in the lab, I collaborated with IT services to program and
-              maintain our liquid-handling robotics and contributed to the
-              development of a new lab information system.
+              I originally graduated from University of Alabama at Birmingham
+              (UAB) in 2020 with a Biomedical Sciences degree and worked in a
+              lab for 3 years. While in the lab, I collaborated with IT services
+              to program and maintain our liquid-handling robotics and
+              contributed to the development of a new lab information system.
             </p>
             <br />
             <p className="text-xl mt-4">
@@ -48,9 +48,9 @@ export default function about() {
             <br />
             <p className="text-xl mt-4">
               I began picking up programming on the side, learning to code from
-              online resources, and eventually returning to school full-time.
-              Since then, I have been able to pursue opportunities in software
-              engineering and campus engagement.
+              online resources, and eventually returning to school full-time. I
+              was able to pursue opportunities in software engineering and
+              campus engagement. I graduated from UAB CS in Fall 2024.
             </p>
             <br />
             <p className="text-xl mt-4">
@@ -61,16 +61,19 @@ export default function about() {
               >
                 Geeks and Nerds
               </Link>
-              , and I am currently a full-time Software Developer at{" "}
+              , was the Secretary for ACM at UAB in Fall 2024 and I was the C
+              tutor for our Systems Programming and Computer Organization &
+              Assembly courses.
+            </p>
+            <p className="text-xl mt-4">
+              I am currently a Software Developer at{" "}
               <Link
                 href="https://getdarktower.com/"
                 className="text-colorPrimary underline"
               >
                 Dark Tower
               </Link>
-              . I am also the Secretary for ACM at UAB. And finally, I am the C
-              tutor for our Systems Programming and Computer Organization &
-              Assembly courses.
+              .
             </p>
             <br />
           </div>
