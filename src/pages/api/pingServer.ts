@@ -37,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .json({ message: "Too many requests, please try again later." });
   }
 
-  const serverIP = "108.250.31.41";
+  const serverIP = "192.168.1.246";
 
   exec(`ping -c 1 ${serverIP}`, (error, stdout, stderr) => {
     if (error) {
