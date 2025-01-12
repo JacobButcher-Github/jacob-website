@@ -8,7 +8,7 @@ export default function projects() {
       <Head>
         <title>Jacob Butcher - Projects</title>
       </Head>
-      <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen">
+      <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen overflow-auto">
         <NavBar />
         <div className="flex flex-col items-center text-mainText font-motiva-sans">
 
