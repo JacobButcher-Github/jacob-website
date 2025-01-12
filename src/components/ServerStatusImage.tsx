@@ -7,7 +7,7 @@ const ServerStatusImage = () => {
   useEffect(() => {
     const checkServerStatus = async () => {
       try {
-        const response = await fetch("/api/checkServer");
+        const response = await fetch("/api/pingServer");
         if (response.ok) {
           setServerStatus(true);
         } else {
@@ -29,7 +29,7 @@ const ServerStatusImage = () => {
     <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4">
       {serverStatus === true ? (
         <Image
-          src="images/server_up.gif"
+          src="/images/server_on.gif"
           alt="Server Up"
           width={100}
           height={474}
@@ -38,7 +38,7 @@ const ServerStatusImage = () => {
         />
       ) : serverStatus === false ? (
         <Image
-          src="images/server_down.gif"
+          src="/images/server_down.gif"
           alt="Server Down"
           width={100}
           height={474}
@@ -52,4 +52,4 @@ const ServerStatusImage = () => {
   );
 };
 
-export default ServerStatusImage
+export default ServerStatusImage;
