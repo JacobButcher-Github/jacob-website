@@ -15,7 +15,7 @@ export interface ProjectItem {
   imageLocations: string[],
   tagsList: tags[];
   git: string,
-  route: string
+  route: string | null
 }
 
 const projectItems: ProjectItem[] = [
