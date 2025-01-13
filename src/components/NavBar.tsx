@@ -13,8 +13,8 @@ const navBarItems: NavBarItem[] = [
     title: "Projects",
     children: [
       {
-        title: "Placeholder",
-        route: "/",
+        title: "Website",
+        route: "/website",
       },
     ],
   },
