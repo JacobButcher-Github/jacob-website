@@ -3,6 +3,8 @@ import { FaReact, FaCaretUp, FaWind } from "react-icons/fa";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import { ProjectItem } from "../../components/ProjectList";
+import { Params } from "../../../lib/posts"
+import { title } from "process";
 
 interface tags {
   icon: React.ReactNode;
@@ -56,3 +58,42 @@ const projectItems: ProjectInfo[] = [
     about: {},
   },
 ];
+
+
+function getAllProjectTitles() {
+  const projectTitles: string[] = []
+
+  for (var projectitem of projectItems) {
+    projectTitles.push(projectitem.title.toLowerCase())
+  }
+
+  return projectTitles.map((title) => {
+    return {
+      params: {
+        title: "projects/" + title
+      },
+    };
+  });
+
+}
+
+export async function getStaticPaths() {
+  const paths = getAllProjectTitles();
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export default function Project({ projectItems }: { projectItems: ProjectInfo }) {
+  return (
+    <>
+      <Head>
+        <title>{projectItems.title.toLowerCase()}</title>
+      </Head>
+      <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen text-mainText">
+        <NavBar />
+      </div>
+    </>
+  );
+};
