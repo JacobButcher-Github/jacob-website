@@ -1,0 +1,16 @@
+import { ProjectInfo } from "../../components/ProjectList";
+
+interface Props {
+  item: ProjectInfo;
+}
+
+const ProjectPane = (props: Props) => {
+  const { item } = props;
+  return (
+    <div className="">
+      <button>{item.title}</button>
+    </div>
+  );
+};
+
+export default ProjectPane;

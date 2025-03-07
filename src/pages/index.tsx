@@ -2,7 +2,7 @@ import Head from "next/head";
 import MainBanner from "../components/MainBanner";
 import NavBar from "../components/NavBar";
 import LinkBar from "../components/LinkBar";
-import QuickAbout from "../components/QuickAbout"
+import QuickAbout from "../components/QuickAbout";
 
 export default function index() {
   return (

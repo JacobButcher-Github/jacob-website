@@ -1,21 +1,30 @@
 import React from "react";
-import Link from 'next/link';
 import ProjectCard from "./ProjectCard";
-import { FaReact, FaCaretUp, FaWind } from 'react-icons/fa';
+import { FaReact, FaCaretUp, FaWind } from "react-icons/fa";
 
 interface tags {
   icon: React.ReactNode;
-  title: string,
-  link: string
+  title: string;
+  link: string;
 }
 
 export interface ProjectItem {
-  title: string,
-  description: string,
-  imageLocations: string[],
+  title: string;
+  description: string;
+  imageLocations: string[];
   tagsList: tags[];
-  git: string,
-  route: string | null
+  git: string;
+  route: string;
+}
+
+export interface ProjectInfo extends ProjectItem {
+  id: string;
+  owner: string;
+  repo: string;
+  headers: { [key: string]: string };
+  bannerLocation: string;
+  features: string[];
+  about: { [key: string]: string };
 }
 
 const projectItems: ProjectItem[] = [
@@ -26,28 +35,28 @@ const projectItems: ProjectItem[] = [
       "/images/websiteImages/index.png",
       "/images/websiteImages/about.png",
       "/images/websiteImages/blog.png",
-      "/images/websiteImages/projects.png"
+      "/images/websiteImages/projects.png",
     ],
     tagsList: [
       {
         icon: <FaCaretUp key="next" className="mr-1" />,
         title: "Next.JS",
-        link: "https://nextjs.org/"
+        link: "https://nextjs.org/",
       },
       {
         icon: <FaReact key="react" className="mr-1" />,
         title: "React",
-        link: "https://react.dev/"
+        link: "https://react.dev/",
       },
       {
         icon: <FaWind key="tailwind" className="mr-1" />,
         title: "Tailwind CSS",
-        link: "https://tailwindcss.com/"
-      }
+        link: "https://tailwindcss.com/",
+      },
     ],
     git: "https://github.com/JacobButcher-Github/jacob-website",
-    route: "/website"
-  }
+    route: "/projects/website",
+  },
 ];
 
 const ProjectList = () => {
@@ -59,7 +68,7 @@ const ProjectList = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default ProjectList
+export default ProjectList;

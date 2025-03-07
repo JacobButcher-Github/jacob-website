@@ -12,7 +12,7 @@ This website had its stylings heavily inspired from the steam workshop, because 
 
 The banner was taken from [Waneela](https://x.com/waneella_?lang=en) with the text edited by me
 
-## Cool Stuff (Aka future planned features)
+## Cool Stuff
 
 ### Server Heartbeat Tracker
 
@@ -21,6 +21,8 @@ The website will have a heartbeat checker on my server, so that I can tell when 
 ### Various Projects
 
 This is my main landing page, so some projects are hosted on AWS or Azure or Google Cloud Hosting to show people that I've worked with them. Anything truly intensive will be hosted on my server. It has been proven paying for a domain name is beyond me, so why would paying any of those companies to host random apps I make be a thing?
+
+## Future Planned Features
 
 ### Procedurally Generated Banner
 
