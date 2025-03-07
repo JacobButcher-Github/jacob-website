@@ -3,16 +3,9 @@ import { FaReact, FaCaretUp, FaWind } from "react-icons/fa";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import { ProjectItem } from "../../components/ProjectList";
-import { Params } from "../../../lib/posts"
-import { title } from "process";
-
-interface tags {
-  icon: React.ReactNode;
-  title: string;
-  link: string;
-}
 
 interface ProjectInfo extends ProjectItem {
+  id: string;
   owner: string;
   repo: string;
   headers: { [key: string]: string };
@@ -24,6 +17,7 @@ interface ProjectInfo extends ProjectItem {
 const projectItems: ProjectInfo[] = [
   {
     title: "Website",
+    id: "website",
     description: "Landig page for all other projects",
     imageLocations: [
       "/images/websiteImages/index.png",
@@ -59,22 +53,20 @@ const projectItems: ProjectInfo[] = [
   },
 ];
 
-
 function getAllProjectTitles() {
-  const projectTitles: string[] = []
+  const projectTitles: string[] = [];
 
   for (var projectitem of projectItems) {
-    projectTitles.push(projectitem.title.toLowerCase())
+    projectTitles.push(projectitem.title.toLowerCase());
   }
 
   return projectTitles.map((title) => {
     return {
       params: {
-        title: "projects/" + title
+        title: "projects/" + title,
       },
     };
   });
-
 }
 
 export async function getStaticPaths() {
@@ -83,17 +75,48 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-};
+}
 
-export default function Project({ projectItems }: { projectItems: ProjectInfo }) {
+interface Params {
+  title: string;
+}
+
+interface ProjectData {
+  id: string;
+  projectData: ProjectInfo;
+  [key: string]: any;
+}
+
+async function getProjectData(id: string): Promise<ProjectData> {
+  for (var project of projectItems) {
+    if (project.id === id) {
+      return {
+        id,
+        projectData: project,
+      };
+    }
+  }
+}
+
+export async function getStaticProps({ params }: { params: Params }) {
+  const projectData = await getProjectData(params.title);
+  console.log("ProjectData: ", projectData);
+  return {
+    props: {
+      projectData,
+    },
+  };
+}
+
+export default function Project({ projectData }: { projectData: ProjectInfo }) {
   return (
     <>
       <Head>
-        <title>{projectItems.title.toLowerCase()}</title>
+        <title>{projectData.title}</title>
       </Head>
       <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans min-h-screen text-mainText">
         <NavBar />
       </div>
     </>
   );
-};
+}
