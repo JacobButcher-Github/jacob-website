@@ -16,7 +16,7 @@ The banner was taken from [Waneela](https://x.com/waneella_?lang=en) with the te
 
 ### Server Heartbeat Tracker
 
-The website will have a heartbeat checker on my server, so that I can tell when the thing is alive or if it died because the power in my area is horrifically unreliable. When that is down, it closes links to apps hosted on the server that wouldn't work anyways, making them unclickable.
+The website has a heartbeat checker on my server, so that I can tell when the thing is alive or if it died because the power in my area is horrifically unreliable.
 
 ### Various Projects
 

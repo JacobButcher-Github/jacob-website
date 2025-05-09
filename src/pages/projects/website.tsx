@@ -48,14 +48,25 @@ const Website = () => {
   return (
     <>
       <Head>
-        <title>Jacob Butcher</title>
+        <title>Jacob Butcher - Project Website</title>
       </Head>
       <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans h-screen overflow-auto">
         <NavBar />
         <div className="">
-          <ProjectBanner item={projectItem} />
-          <ProjectPane item={projectItem} />
-          <ProjectLinks item={projectItem} />
+          <div className="flex flex-col items-center text-mainText font-motiva-sans p-3 gap-2">
+            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
+              <h1 className="text-2xl font-bold ml-3">Project Website</h1>
+            </div>
+            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
+              <ProjectBanner item={projectItem} />
+            </div>
+            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
+              <ProjectPane item={projectItem} />
+            </div>
+            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
+              <ProjectLinks item={projectItem} />
+            </div>
+          </div>
         </div>
       </div>
     </>
