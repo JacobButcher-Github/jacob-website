@@ -10,7 +10,7 @@ import ProjectLinks from "../../components/project/ProjectLinks";
 const projectItem: ProjectInfo = {
   title: "Website",
   id: "website",
-  description: "Landig page for all other projects",
+  description: "Landing page for all other projects, info on self",
   imageLocations: [
     "/images/websiteImages/index.png",
     "/images/websiteImages/about.png",

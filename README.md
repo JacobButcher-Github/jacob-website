@@ -1,4 +1,6 @@
-# Personal website created with Next.js using Tailwind CSS
+# Personal Website
+
+Created with Tailwind CSS and Next.js
 
 I wanted to make a personal website landing page with links that can lead to sites and apps hosted on my home server without needing to pay for a domain service. Because apparently spending 200+ and more on electricity every month on my server was perfectly fine, but 10$ a year (on the high end) on a domain name left a bad taste in my mouth. I don't know.
 
