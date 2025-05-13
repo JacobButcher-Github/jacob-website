@@ -24,7 +24,7 @@ const ProjectBanner = (props: Props) => {
           />
         </div>
         <p className="font-motiva-sans text-mainText">{item.description}</p>
-        {/* Github activity graph goes here when I figure out how to do that.  */}
+        {/* TODO: Github activity graph goes here when I figure out how to do that.  */}
         <div className="flex flex-row space-x-2 gap-2">
           <p className="font-motiva-sans text-dimText">Tags:</p>
           {item.tagsList.map((tag, index) => (
