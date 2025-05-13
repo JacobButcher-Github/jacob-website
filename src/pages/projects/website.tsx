@@ -39,7 +39,7 @@ const projectItem: ProjectInfo = {
   owner: "JacobButcher-Github",
   repo: "jacob-website",
   headers: {},
-  bannerLocation: "../../../public/images/Websitebackground.png",
+  bannerLocation: "/images/Websitebackground.png",
   features: ["feat1", "feat2", "feat3"],
   about: {},
 };
