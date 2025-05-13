@@ -13,8 +13,8 @@ const ProjectPreviewPane = (props: Props) => {
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div className="flex flex-row items-center space-y-2">
-      <div className="w-2/3 h-64 flex justify-center items-center relative">
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-5/6 h-80">
         <Image
           fill={true}
           src={mainImage}
@@ -23,16 +23,15 @@ const ProjectPreviewPane = (props: Props) => {
         />
       </div>
 
-      <div className="w-1/3 flex flex-col ml-2">
-        {images.slice(0).map((image, index) => (
-          <div key={index} className="relative w-30 h-20">
+      <div className="flex flex-row justify-center gap-3">
+        {images.map((image, index) => (
+          <div key={index} className="relative w-32 h-20">
             <Image
               fill={true}
               src={image}
               alt={`Small ${index + 1}`}
               className="object-cover cursor-pointer rounded"
-              onMouseEnter={() => setMainImage(image)}
-              onMouseOut={() => setMainImage(images[0])}
+              onClick={() => setMainImage(image)}
             />
           </div>
         ))}
