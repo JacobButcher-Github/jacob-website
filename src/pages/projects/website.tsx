@@ -3,10 +3,7 @@ import { FaReact, FaCaretUp, FaWind } from "react-icons/fa";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import { ProjectInfo } from "../../components/ProjectList";
-import ProjectBanner from "../../components/project/ProjectBanner";
-import ProjectDetails from "../../components/project/ProjectDetails";
-import ProjectLinks from "../../components/project/ProjectLinks";
-import ProjectFeatures from "../../components/project/ProjectFeatures";
+import Project from "../../components/Project";
 
 const projectItem: ProjectInfo = {
   title: "Website",
@@ -41,8 +38,23 @@ const projectItem: ProjectInfo = {
   repo: "jacob-website",
   headers: {},
   bannerLocation: "/images/Websitebackground.png",
-  features: ["feat1", "feat2", "feat3"],
-  about: {},
+  features: [
+    "React",
+    "TailwindCSS",
+    "Next.js",
+    "Server Heartbeat Tracker",
+    "Blog",
+  ],
+  about: {
+    "Server Heartbeat Tracker":
+      "Using Next.js Api Routes, pings my personal server every 30 minutes to check if it's online.",
+    "Personal Blog":
+      "Blog that uses matter and remark to convert markdown posts into blog posts. Will never have another post, but it does exist.",
+    "Easily added new projects":
+      "Utilizing React components, easily add new projects to the list to show off.",
+    "Link to other interesting projects":
+      "A location that lists my projects and links to any interesting ones",
+  },
 };
 
 const Website = () => {
@@ -54,27 +66,7 @@ const Website = () => {
       <div className="bg-gradient-to-b from-bgMain to-bgSecondary font-motiva-sans h-screen overflow-auto">
         <NavBar />
         <div className="">
-          <div className="flex flex-col items-center text-mainText font-motiva-sans p-3 gap-2">
-            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
-              <h1 className="text-2xl font-bold ml-3">Project Website</h1>
-            </div>
-            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
-              <ProjectBanner item={projectItem} />
-            </div>
-            <div className="flex flex-row w-5/6 gap-2">
-              <div className="flex flex-col w-2/3 gap-2">
-                <div className="bg-bgMain rounded-xl flex items-center p-3">
-                  <ProjectLinks item={projectItem} />
-                </div>
-                <div className="bg-bgMain rounded-xl flex items-center p-3">
-                  <ProjectDetails item={projectItem} />
-                </div>
-              </div>
-              <div className="w-1/3 bg-bgMain rounded-xl flex items-center p-3 justify-center">
-                <ProjectFeatures item={projectItem} />
-              </div>
-            </div>
-          </div>
+          <Project item={projectItem} />
         </div>
       </div>
     </>
