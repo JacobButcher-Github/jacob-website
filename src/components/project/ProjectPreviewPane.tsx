@@ -14,7 +14,7 @@ const ProjectPreviewPane = (props: Props) => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="relative w-5/6 h-80">
+      <div className="relative w-5/6 h-96">
         <Image
           fill={true}
           src={mainImage}

@@ -11,10 +11,10 @@ const ProjectBanner = (props: Props) => {
   const { item } = props;
   return (
     <div className="flex-row flex w-full">
-      <div className="w-1/2">
+      <div className="w-2/3">
         <ProjectPreviewPane item={item} />
       </div>
-      <div className="w-1/2 flex flex-col justify-center items-center">
+      <div className="w-1/3 flex flex-col justify-center items-center">
         <div className="relative w-80 h-40">
           <Image
             fill={true}

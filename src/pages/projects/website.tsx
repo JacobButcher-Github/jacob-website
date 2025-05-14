@@ -4,8 +4,9 @@ import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import { ProjectInfo } from "../../components/ProjectList";
 import ProjectBanner from "../../components/project/ProjectBanner";
-import ProjectPane from "../../components/project/ProjectPane";
+import ProjectDetails from "../../components/project/ProjectDetails";
 import ProjectLinks from "../../components/project/ProjectLinks";
+import ProjectFeatures from "../../components/project/ProjectFeatures";
 
 const projectItem: ProjectInfo = {
   title: "Website",
@@ -60,11 +61,18 @@ const Website = () => {
             <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
               <ProjectBanner item={projectItem} />
             </div>
-            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
-              <ProjectPane item={projectItem} />
-            </div>
-            <div className="bg-bgMain w-5/6 rounded-xl flex items-center p-3">
-              <ProjectLinks item={projectItem} />
+            <div className="flex flex-row w-5/6 gap-2">
+              <div className="flex flex-col w-2/3 gap-2">
+                <div className="bg-bgMain rounded-xl flex items-center p-3">
+                  <ProjectLinks item={projectItem} />
+                </div>
+                <div className="bg-bgMain rounded-xl flex items-center p-3">
+                  <ProjectDetails item={projectItem} />
+                </div>
+              </div>
+              <div className="w-1/3 bg-bgMain rounded-xl flex items-center p-3 justify-center">
+                <ProjectFeatures item={projectItem} />
+              </div>
             </div>
           </div>
         </div>

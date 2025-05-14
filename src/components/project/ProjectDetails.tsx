@@ -1,10 +1,10 @@
-import { ProjectInfo } from "../../components/ProjectList";
+import { ProjectInfo } from "../ProjectList";
 
 interface Props {
   item: ProjectInfo;
 }
 
-const ProjectPane = (props: Props) => {
+const ProjectDetails = (props: Props) => {
   const { item } = props;
   return (
     <div className="">
@@ -13,4 +13,4 @@ const ProjectPane = (props: Props) => {
   );
 };
 
-export default ProjectPane;
+export default ProjectDetails;
