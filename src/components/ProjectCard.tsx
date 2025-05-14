@@ -13,7 +13,7 @@ const ProjectCard = (props: Props) => {
   return (
     <div
       className="bg-bgMain hover:bg-bgHover flex flex-row items-start w-full p-2 rounded space-x-5 cursor-pointer"
-      onClick={() => window.location.href = item.route}
+      onClick={() => (window.location.href = item.route)}
     >
       <div className="w-5/12">
         <PreviewPane item={item} />
