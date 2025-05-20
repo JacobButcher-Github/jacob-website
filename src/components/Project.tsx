@@ -29,7 +29,7 @@ const Project = (props: Props) => {
             <ProjectDetails item={item} />
           </div>
         </div>
-        <div className="w-1/4 bg-bgMain rounded-xl flex p-3 justify-center">
+        <div className="w-1/4 bg-bgMain rounded-xl flex p-3 justify-start">
           <ProjectFeatures item={item} />
         </div>
       </div>
